@@ -633,12 +633,13 @@ footer.mbr-footer {
 .mbr-gallery .mbr-gallery-item {
   position: relative;
   display: inline-block;
-  width: 25%;
+  width: 50%;
+  padding: 2em;
 }
 
 @media (max-width: 768px) {
   .mbr-gallery .mbr-gallery-item {
-    width: 50%;
+    width: 100%;
   }
 }
 
@@ -694,7 +695,7 @@ footer.mbr-footer {
 
 /* container */
 .mbr-gallery .container.mbr-gallery-layout-default {
-  padding: 93px 0;
+  padding: 93px;
 }
 
 /* fix horizontal scrollbar */
