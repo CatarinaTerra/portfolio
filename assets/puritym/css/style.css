@@ -571,7 +571,7 @@ footer.mbr-footer {
   z-index: 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1055px) {
   .mbr-slider .carousel-control {
     top: auto;
     bottom: 20px;
