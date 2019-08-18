@@ -42,20 +42,3 @@ img.size_logos{
 }
 
 
-@media (max-width: 400px) {
-	.control-other {
-	position: absolute !important;
-	top: 80% !important; /* pushes the icon in the middle of the height */
-	z-index: 5 !important;
-	display: inline-block !important;
-	}
-}
-
-@media (max-width: 768px) {
-	.control-other {
-	position: absolute !important;
-	top: 80% !important; /* pushes the icon in the middle of the height */
-	z-index: 5 !important;
-	display: inline-block !important;
-	}
-}
