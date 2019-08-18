@@ -546,10 +546,13 @@ footer.mbr-footer {
   margin-right: 2rem;
 }
 
-.mbr-slider .carousel-control:hover {
-  background: #000;
-  color: #fff;
+@media (min-width: 769px) {
+    .mbr-slider .carousel-control:hover {
+    background: #000;
+    color: #fff;
+  }
 }
+
 
 .mbr-slider .carousel-indicators {
   bottom: 0;
