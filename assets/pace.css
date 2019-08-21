@@ -228,3 +228,5 @@
     animation-timing-function: ease-out;
   }
 }
+
+.pace-running > *:not(.pace) { display: none; }
