@@ -40,3 +40,12 @@ img.size_logos{
 	margin-left: auto !important; 
 	margin-right: auto !important;
 }
+
+@media (max-width: 768px) {
+.carousel-control {
+position: absolute !important;
+top: 80% !important; /* pushes the icon in the middle of the height */
+z-index: 5 !important;
+display: inline-block !important;
+}
+}
