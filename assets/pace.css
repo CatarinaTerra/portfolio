@@ -228,4 +228,6 @@
   }
 }
 
-.pace-running > *:not(.pace) { div.other-work{display: none;} }
+.pace-running > *:not(.pace) div.other-work{
+    display: none;
+  }
