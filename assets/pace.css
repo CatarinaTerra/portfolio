@@ -2,8 +2,7 @@
   width: 140px;
   height: 300px;
   position: fixed;
-  top: -90px;
-  right: -20px;
+  top: 4em;
   z-index: 2000;
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
@@ -43,8 +42,10 @@
 .pace .pace-progress {
   position: absolute;
   display: block;
+  left: 50%;
   bottom: 0;
   z-index: 1910;
+  margin-left: -30px;
   width: 60px;
   height: 75px;
   background: rgba(20, 20, 20, .1);
@@ -227,4 +228,4 @@
   }
 }
 
-.pace-running > *:not(.pace) { other-work.hide() }
+.pace-running > *:not(.pace) { div.other-work{display: none;} }
