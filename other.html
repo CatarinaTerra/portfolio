@@ -180,7 +180,9 @@
 }
 </style></div>
 
-<section id="hidden-during-page-load" class="hidden" style="background-color: rgb(255, 255, 255); padding-top: 8rem; padding-left: 5px; padding-right: 5px;" id="gallery1-b" data-rv-view="39">
+
+<div class="hidden">
+<section id="hidden-during-page-load" style="background-color: rgb(255, 255, 255); padding-top: 8rem; padding-left: 5px; padding-right: 5px;" id="gallery1-b" data-rv-view="39">
     <div class="masonry">
         <div class="masonry-sizer"></div>
             <a data-toggle="modal" href="#lb-gallery1-other" data-slide-to="0">
@@ -383,6 +385,7 @@
 </div>
 
 </section>
+</div>
 <!-- 
 <section class="mbr-slider mbr-section mbr-section__container carousel slide mbr-section__container--isolated mbr-after-navbar other-work" data-ride="carousel" data-keyboard="false" data-wrap="true" data-interval="5000" id="slider2-12" data-rv-view="132" >
     <div class=" container article-slider">
@@ -934,15 +937,11 @@
       percentPosition: true
     });
 </script>
-<script type="text/javascript">
-    $(function () {
-    $('#hidden-during-page-load').removeClass('hidden');
-    });
-</script>
+
 <script language="javascript" type="text/javascript">
      $(window).load(function() {
      $('#loading').hide();
-     $("#hidden-during-page-load").show();
+     $('.hide').show();
   });
 </script>
 </body>
