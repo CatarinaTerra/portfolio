@@ -111,6 +111,6 @@ img.size_logos{
 	}
 }
 
-#hidden-during-page-load {
+.hidden {
     display:none !important;   
 }
