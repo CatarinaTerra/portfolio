@@ -797,5 +797,20 @@
       percentPosition: true
     });
 </script>
+<script>
+
+var $container = $('.grid');
+
+$container.imagesLoaded(function(){
+  $container.masonry({
+    itemSelector: '.isotope-item',
+    animate: true,
+    columnWidth: 220,
+    isFitWidth: true,
+    gutterWidth: 12
+  });
+});
+
+</script>
 </body>
 </html>
