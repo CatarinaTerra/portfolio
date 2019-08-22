@@ -1,3 +1,57 @@
+.masonry-sizer,
+.masonry-item {
+	width: 25%;
+	padding: 10px;
+}
+
+
+.modal-dialog-centered {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: calc(100% - 1rem);
+}
+
+.modal-dialog-centered::before {
+  display: block;
+  height: calc(100vh - 1rem);
+  content: "";
+}
+
+.modal-dialog-centered.modal-dialog-scrollable {
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.modal-dialog-centered.modal-dialog-scrollable .modal-content {
+  max-height: none;
+}
+
+.modal-dialog-centered.modal-dialog-scrollable::before {
+  content: none;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog-centered {
+    min-height: calc(100% - 3.5rem);
+  }
+  .modal-dialog-centered::before {
+    height: calc(100vh - 3.5rem);
+  }
+}
+
+@media (max-width: 768px) {
+.masonry-sizer,
+.masonry-item {
+	width: 50%;
+	padding: 5px;
+}
+}
+
 .navbar-nav{padding-top: 7px;}
 
 .cart-block a.linkmenu:hover {
@@ -9,7 +63,7 @@
 
 
 .logo .logos {
-  width: 24.89% !important;
+  width: 24% !important;
 }
 
 @media (max-width: 768px) {
@@ -41,12 +95,18 @@ img.size_logos{
 	margin-right: auto !important;
 }
 
-@media (max-width: 768px) {
 .carousel-control {
-position: absolute !important;
-top: 80% !important; /* pushes the icon in the middle of the height */
-z-index: 5 !important;
-display: inline-block !important;
-}
+	position: absolute !important;
+	top: 50% !important; /* pushes the icon in the middle of the height */
+	z-index: 5 !important;
+	display: inline-block !important;
 }
 
+@media (max-width: 768px) {
+		.carousel-control {
+		position: absolute !important;
+		top: 80% !important; /* pushes the icon in the middle of the height */
+		z-index: 5 !important;
+		display: inline-block !important;
+	}
+}
