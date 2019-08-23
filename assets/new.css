@@ -110,3 +110,7 @@ img.size_logos{
 		display: inline-block !important;
 	}
 }
+
+#hidden-during-page-load{
+	display: none;
+}
