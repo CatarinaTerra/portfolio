@@ -951,5 +951,15 @@
      $('#loading').hide();
   });
 </script>
+<script type="text/javascript">
+    var oldPageYOffset = 0;
+$(window).scroll(function(){
+  if (window.pageYOffset != oldPageYOffset)
+  {
+    oldPageYOffset = window.pageYOffset;
+    console.log("Window scrolling changed");
+  }
+});
+</script>
 </body>
 </html>
