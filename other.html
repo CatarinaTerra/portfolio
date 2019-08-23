@@ -951,5 +951,15 @@
      $('#loading').hide();
   });
 </script>
+<script type="text/javascript">
+    document.querySelector('.jsExample').addEventListener('mouseenter', function(e){
+  e.target.style.overflow = 'auto';
+}, false);
+
+document.querySelector('.jsExample').addEventListener('mouseleave', function(e){
+  e.target.style.overflow = 'hidden';
+}, false);
+
+</script>
 </body>
 </html>
