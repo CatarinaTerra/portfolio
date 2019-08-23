@@ -110,3 +110,5 @@ img.size_logos{
 		display: inline-block !important;
 	}
 }
+
+body.disable-scroll { overflow: hidden; }
