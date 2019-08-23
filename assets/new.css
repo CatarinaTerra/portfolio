@@ -111,4 +111,4 @@ img.size_logos{
 	}
 }
 
-body.disable-scroll { overflow-y: hidden; }
+body.disable-scroll {margin: 0; height: 100%; overflow: hidden}
