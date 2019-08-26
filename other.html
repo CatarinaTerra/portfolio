@@ -404,7 +404,7 @@
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 
-  <script>
+<script language="javascript" type="text/javascript">
     var $grid = $('.masonry').masonry({
       // options
       itemSelector: '.masonry-item',
@@ -421,10 +421,8 @@
             });
         });
     });
-</script>
-
-<script language="javascript" type="text/javascript">
     $(window).on("load", function(){
+        $grid.masonry('layout');
         $('#gallery1-b').show();
         $('#loading').hide();
   });
