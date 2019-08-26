@@ -348,7 +348,7 @@ footer.mbr-footer {
 .mbr-after-navbar:before {
   content: "";
   display: block;
-  height: 54px;
+  height: 15px;
 }
 
 .mbr-section__container--first {
