@@ -410,6 +410,7 @@
       itemSelector: '.masonry-item',
       columnWidth: '.masonry-sizer',
       percentPosition: true,
+        transitionDuration: 0
     });
     $grid.imagesLoaded().progress( function() {
       $grid.masonry('layout');
@@ -422,7 +423,6 @@
         });
     });
     $(window).on("load", function(){
-        $grid.masonry('layout');
         $('#gallery1-b').show();
         $('#loading').hide();
   });
