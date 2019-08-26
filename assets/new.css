@@ -143,18 +143,11 @@ img.size_logos{
 	margin-right: auto !important;
 }
 
-.carousel-control {
-	position: absolute !important;
+@media (min-width: 768px) {
+		.carousel-control {
+		position: absolute !important;
 	top: 50% !important; /* pushes the icon in the middle of the height */
 	z-index: 5 !important;
 	display: inline-block !important;
-}
-
-@media (max-width: 768px) {
-		.carousel-control {
-		position: absolute !important;
-		top: 80% !important; /* pushes the icon in the middle of the height */
-		z-index: 5 !important;
-		display: inline-block !important;
 	}
 }
