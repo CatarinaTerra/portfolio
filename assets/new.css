@@ -149,3 +149,11 @@ img.size_logos{
 	z-index: 5 !important;
 	display: inline-block !important;
 }
+
+@media (max-width: 768px) {
+		.carousel-control {
+		position: fixed !important;
+		z-index: 5 !important;
+		display: block !important;
+	}
+}
