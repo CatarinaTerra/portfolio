@@ -152,8 +152,9 @@ img.size_logos{
 
 @media (max-width: 768px) {
 		.carousel-control {
-		position: fixed !important;
+		position: absolute !important;
+		bottom: 10% !important; /* pushes the icon in the middle of the height */
 		z-index: 5 !important;
-		display: block !important;
+		display: inline-block !important;
 	}
 }
