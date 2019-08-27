@@ -116,12 +116,12 @@
 
 @media (max-width: 768px) {
 	.logo .logos {
- 	 width: 100% !important;
+ 	 width: 49% !important;
+	} 
+	.galeria-logos{
+		padding-left: 1em;
+		padding-right: 1em;
 	}
-
-@media (max-width: 400px) {
-	.logo .logos {
-  	width: 100% !important;
 }
 
 
