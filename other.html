@@ -407,29 +407,31 @@
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 
 <script language="javascript" type="text/javascript">
-    var $grid = $('.masonry').masonry({
-      // options
-      itemSelector: '.masonry-item',
-      columnWidth: '.masonry-sizer',
-      percentPosition: true,
-        transitionDuration: 0
-    });
-    var image_count = 0
-    var total_images = $('img').length
-    $grid.imagesLoaded().progress( function() {
-      $grid.masonry('layout');
+  $(document).ready( function(){
+      var $grid = $('.masonry').masonry({
+    // options
+          itemSelector: '.masonry-item',
+          columnWidth: '.masonry-sizer',
+          percentPosition: true,
+            transitionDuration: 0
+      });
+      var image_count = 0
+      var total_images = $('img').length
+      $grid.imagesLoaded().progress( function() {
+        $grid.masonry('layout');
         image_count += 1
         var loading_percentage = Math.floor((image_count * 100) / total_images)
         $("#loading-percentage").html(loading_percentage + "%")
 
-    });
-    $(function() {
-        $('#lb-gallery1-other').on("show.bs.modal", function(){
-            $(this).find(".lazy").each(function() {
-                $(this).attr('src', $(this).attr('data-src-lazy'));
-            });
-        });
-    });
+      });
+      $(function() {
+          $('#lb-gallery1-other').on("show.bs.modal", function(){
+              $(this).find(".lazy").each(function() {
+                  $(this).attr('src', $(this).attr('data-src-lazy'));
+              });
+          });
+      });
+    })
 </script>
     <script language="javascript" type="text/javascript">
      $(window).load(function() {
