@@ -8,6 +8,11 @@
 	overflow: hidden;
 }
 
+@media (max-width: 768px) {
+.carousel-control, .close {
+    position: fixed;
+}}
+
 #loading-percentage {
 	color: #FFD521;
 	font-size: 200%;
