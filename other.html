@@ -183,7 +183,10 @@
   -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
   transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
 }
-</style></div>
+</style>
+<div id="loading-percentage">0%</div>
+</div>
+
 
 <section style="background-color: rgb(255, 255, 255); padding-top: 8rem; padding-left: 5px; padding-right: 5px;" id="gallery1-b" data-rv-view="39">
     <div class="masonry">
@@ -411,8 +414,14 @@
       percentPosition: true,
         transitionDuration: 0
     });
+    var image_count = 0
+    var total_images = $('img').length
     $grid.imagesLoaded().progress( function() {
       $grid.masonry('layout');
+        image_count += 1
+        var loading_percentage = Math.floor((image_count * 100) / total_images)
+        $("#loading-percentage").html(loading_percentage + "%")
+
     });
     $(function() {
         $('#lb-gallery1-other').on("show.bs.modal", function(){
@@ -427,6 +436,7 @@
      $('#loading').hide();
      $('html').prop('overflow', 'auto')
      $('body').prop('overflow', 'auto')
+     $('#loading-percentage').hide();
   });
 </script>
 </body>
