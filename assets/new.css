@@ -4,6 +4,10 @@
 	padding: 10px;
 }
 
+html, body {
+	overflow: hidden;
+}
+
 
 .modal-dialog-centered {
   display: -ms-flexbox;
