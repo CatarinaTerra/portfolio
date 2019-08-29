@@ -436,9 +436,9 @@
         });
     });
      $(window).load(function() {
-        $("#loading-percentage").html("100%")
-        clearInterval(loading)
-         $('#loading').hide();
+          $("#loading-percentage").html("100%")
+          clearInterval(loading)
+         $('#loading').hide("slow");
          $('html').prop('overflow', 'auto')
          $('body').prop('overflow', 'auto')
          $('#loading-percentage').hide();
