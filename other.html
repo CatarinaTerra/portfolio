@@ -419,6 +419,7 @@
 
 <script language="javascript" type="text/javascript">
     $("#loading-percentage").html("100%")
+    clearInterval(loading)
     var $grid = $('.masonry').masonry({
       // options
       itemSelector: '.masonry-item',
@@ -437,7 +438,6 @@
         });
     });
      $(window).load(function() {
-          clearInterval(loading)
          $('#loading').fadeOut(1000);
          $('html').prop('overflow', 'auto')
          $('body').prop('overflow', 'auto')
