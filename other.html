@@ -19,18 +19,36 @@
   <link rel="stylesheet" href="assets/pace.css" type="text/css">
 
   <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/masonry/masonry.pkgd.min.js"></script>
   <script src="assets/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script>
-    var image_count = 0
-    var total_images = $('img').length
-    $grid.imagesLoaded().progress( function() {
-      $grid.masonry('layout');
-      image_count += 1
-      var loading_percentage = Math.floor((image_count * 100) / total_images)
-      $("#loading-percentage").html(loading_percentage + "%")
-      console.log(loading_percentage)
-    });
-</script>
+  <script language="javascript" type="text/javascript">
+    $(document).ready( function(){
+        console.log("START")
+        var $grid = $('.masonry').masonry({
+      // options
+            itemSelector: '.masonry-item',
+            columnWidth: '.masonry-sizer',
+            percentPosition: true,
+              transitionDuration: 0
+        });
+        var image_count = 0
+        var total_images = $('img').length
+        $grid.imagesLoaded().progress( function() {
+          $grid.masonry('layout');
+          image_count += 1
+          var loading_percentage = Math.floor((image_count * 100) / total_images)
+          $("#loading-percentage").html(loading_percentage + "%")
+          console.log(loading_percentage)
+        });
+        $(function() {
+            $('#lb-gallery1-other').on("show.bs.modal", function(){
+                $(this).find(".lazy").each(function() {
+                    $(this).attr('src', $(this).attr('data-src-lazy'));
+                });
+            });
+        });
+      })
+  </script>
 </head>
 <body class="p-x-0">
   <section id="dropdown-menu-7" data-rv-view="130">
@@ -413,32 +431,6 @@
   <script src="assets/puritym/js/script.js"></script>
   <script src="assets/dropdown-menu/script.js"></script>
   <script src="assets/mobirise-gallery/script.js"></script>
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/masonry/masonry.pkgd.min.js"></script>
-
-<script language="javascript" type="text/javascript">
-  $(document).ready( function(){
-      console.log("START")
-      var $grid = $('.masonry').masonry({
-    // options
-          itemSelector: '.masonry-item',
-          columnWidth: '.masonry-sizer',
-          percentPosition: true,
-            transitionDuration: 0
-      });
-      $grid.imagesLoaded().progress( function() {
-        $grid.masonry('layout');
-      });
-      $(function() {
-          $('#lb-gallery1-other').on("show.bs.modal", function(){
-              $(this).find(".lazy").each(function() {
-                  $(this).attr('src', $(this).attr('data-src-lazy'));
-              });
-          });
-      });
-    })
-</script>
     <script language="javascript" type="text/javascript">
      $(window).load(function() {
      $('#loading').hide();
