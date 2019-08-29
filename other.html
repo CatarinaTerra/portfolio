@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html class="page-loading">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,7 +23,7 @@
     }
   </script>
 </head>
-<body class="p-x-0">
+<body class="p-x-0 page-loading">
   <section id="dropdown-menu-7" data-rv-view="130">
 
     <nav class="navbar navbar-dropdown transparent navbar-fixed-top bg-color">
@@ -443,8 +443,8 @@
         });
     });
      $(window).load(function() {
-       $('html').css('overflow', '')
-       $('body').css('overflow', '')
+       $('html').removeClass("page-loading")
+       $('body').removeClass("page-loading")
        $('#loading').fadeOut(1000);
     });
 </script>
