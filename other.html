@@ -446,7 +446,9 @@
         });
     });
      $(window).load(function() {
-       $('wrapper-loading').removeClass("page-loading")
+       $('html').removeClass("page-loading")
+       $('body').removeClass("page-loading")
+       $('#wrapper-loading').removeClass("page-loading")
        $('#loading').fadeOut(1000);
     });
 </script>
