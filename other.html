@@ -408,6 +408,7 @@
 
 <script language="javascript" type="text/javascript">
   $(document).ready( function(){
+      console.log("START")
       var $grid = $('.masonry').masonry({
     // options
           itemSelector: '.masonry-item',
@@ -422,7 +423,7 @@
         image_count += 1
         var loading_percentage = Math.floor((image_count * 100) / total_images)
         $("#loading-percentage").html(loading_percentage + "%")
-
+        console.log(loading_percentage)
       });
       $(function() {
           $('#lb-gallery1-other').on("show.bs.modal", function(){
