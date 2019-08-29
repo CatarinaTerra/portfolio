@@ -446,10 +446,11 @@
         });
     });
      $(window).load(function() {
-       $('html').removeClass("page-loading")
-       $('body').removeClass("page-loading")
-       $('#wrapper-loading').removeClass("page-loading")
-       $('#loading').fadeOut(1000);
+      $.when($('#loading').fadeOut(1000)).then(function(){
+         $('html').removeClass("page-loading")
+         $('body').removeClass("page-loading")
+         $('#wrapper-loading').removeClass("page-loading")
+      })
     });
 </script>
 </body>
