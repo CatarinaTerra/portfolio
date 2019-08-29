@@ -418,6 +418,7 @@
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 
 <script language="javascript" type="text/javascript">
+    $("#loading-percentage").html("100%")
     var $grid = $('.masonry').masonry({
       // options
       itemSelector: '.masonry-item',
@@ -436,9 +437,8 @@
         });
     });
      $(window).load(function() {
-          $("#loading-percentage").html("100%")
           clearInterval(loading)
-         $('#loading').hide("slow");
+         $('#loading').fadeOut(1000);
          $('html').prop('overflow', 'auto')
          $('body').prop('overflow', 'auto')
          $('#loading-percentage').hide();
