@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html  >
+<html >
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,11 @@
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
   <link rel="stylesheet" href="assets/new.css" type="text/css">
   <link rel="stylesheet" href="assets/pace.css" type="text/css">
-
+  <script>
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
+  </script>
 </head>
 <body class="p-x-0">
   <section id="dropdown-menu-7" data-rv-view="130">
@@ -434,12 +438,13 @@
         $('#lb-gallery1-other').on("show.bs.modal", function(){
             $(this).find(".lazy").each(function() {
                 $(this).attr('src', $(this).attr('data-src-lazy'));
+                $('body').removeClass('modal-open');
             });
         });
     });
      $(window).load(function() {
-       $('html').css('overflow', 'auto')
-       $('body').css('overflow', 'auto')
+       $('html').css('overflow', '')
+       $('body').css('overflow', '')
        $('#loading').fadeOut(1000);
     });
 </script>
