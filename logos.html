@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html  >
+<html class="page-loading">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +20,9 @@
   
   
 </head>
-<body class="p-x-0">
+<body class="p-x-0 page-loading">
+  <div id="wrapper-loading" class="page-loading">
+
   <section id="dropdown-menu-4" data-rv-view="5">
 
     <nav class="navbar navbar-dropdown transparent navbar-fixed-top bg-color">
@@ -180,7 +182,9 @@
   -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
   transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
 }
-</style></div>
+</style>
+<div id="loading-percentage">0%</div>
+</div>
     <!-- Gallery -->
     <div class="galeria-logos">
         <div class=" mbr-gallery-layout-default">
@@ -275,19 +279,38 @@
         </div>
     </div>
 </section>
-
+</div>
 
   <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script>
+    var percentage = 0
+    var loading = setInterval(function(){
+      percentage += 1;
+      $("#loading-percentage").html(percentage + "%")
+      if (percentage == 100) {
+        clearInterval(loading)
+      }
+    }, 80)
+
+  </script>
   <script src="assets/tether/tether.min.js"></script>
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
   <script src="assets/smooth-scroll/smooth-scroll.js"></script>
   <script src="assets/bootstrap-carousel-swipe/bootstrap-carousel-swipe.js"></script>
   <script src="assets/puritym/js/script.js"></script>
   <script src="assets/dropdown-menu/script.js"></script>
+  <script src="assets/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script language="javascript" type="text/javascript">
-     $(window).load(function() {
-     $('#loading').hide();
-  });
+    $("#loading-percentage").html("100%")
+    clearInterval(loading)
+     $("#gallery1-b").imagesLoaded(
+      function() {
+        $.when($('#loading').fadeOut(1000)).then(function(){
+           $('html').removeClass("page-loading")
+           $('body').removeClass("page-loading")
+           $('#wrapper-loading').removeClass("page-loading")
+        });
+      });
 </script>
   
   

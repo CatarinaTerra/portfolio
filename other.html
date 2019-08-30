@@ -421,9 +421,6 @@
   <script src="assets/masonry/masonry.pkgd.min.js"></script>
   <script src="assets/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/mobirise-gallery/script.js"></script>
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-
 <script language="javascript" type="text/javascript">
     $("#loading-percentage").html("100%")
     clearInterval(loading)
@@ -445,13 +442,14 @@
             });
         });
     });
-     $(window).load(function() {
-      $.when($('#loading').fadeOut(1000)).then(function(){
-         $('html').removeClass("page-loading")
-         $('body').removeClass("page-loading")
-         $('#wrapper-loading').removeClass("page-loading")
-      })
-    });
+     $("#gallery1-b").imagesLoaded(
+      function() {
+        $.when($('#loading').fadeOut(1000)).then(function(){
+           $('html').removeClass("page-loading")
+           $('body').removeClass("page-loading")
+           $('#wrapper-loading').removeClass("page-loading")
+        });
+      });
 </script>
 </body>
 </html>

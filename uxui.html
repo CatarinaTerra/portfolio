@@ -226,12 +226,33 @@
 
 
   <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script>
+    var percentage = 0
+    var loading = setInterval(function(){
+      percentage += 1;
+      $("#loading-percentage").html(percentage + "%")
+      if (percentage == 100) {
+        clearInterval(loading)
+      }
+    }, 80)
+
+  </script>
   <script src="assets/tether/tether.min.js"></script>
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
   <script src="assets/smooth-scroll/smooth-scroll.js"></script>
   <script src="assets/bootstrap-carousel-swipe/bootstrap-carousel-swipe.js"></script>
   <script src="assets/puritym/js/script.js"></script>
   <script src="assets/dropdown-menu/script.js"></script>
-  
+    <script language="javascript" type="text/javascript">
+    $("#loading-percentage").html("100%")
+    clearInterval(loading)
+     $(window).load(function() {
+      $.when($('#loading').fadeOut(1000)).then(function(){
+         $('html').removeClass("page-loading")
+         $('body').removeClass("page-loading")
+         $('#wrapper-loading').removeClass("page-loading")
+      })
+  });
+</script>
 </body>
 </html>
