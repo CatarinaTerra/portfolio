@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html  >
+<html class="page-loading" >
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +20,8 @@
   
   
 </head>
-<body>
+<body class="page-loading">
+  <div id="wrapper-loading" class="page-loading">
   <section id="dropdown-menu-5" data-rv-view="37">
 
     <nav class="navbar navbar-dropdown transparent navbar-fixed-top bg-color">
@@ -44,7 +45,6 @@
 
 </section>
 
-<section class="mbr-gallery mbr-section mbr-section-nopadding mbr-after-navbar logos" id="gallery1-b" data-rv-view="39" style="background-color: rgb(255, 255, 255); padding-top: 4.5rem; padding-bottom: 4rem; padding-right: 2em; padding-left: 2em">
   <div id="loading" class="lds-css ng-scope" style="background-color: rgb(255, 255, 255); width: 100%; height: 100%; right: 0; top: 0; padding-top: 10rem; position: absolute; z-index: 100;"><div style="width:100%;height:100%; margin: 0 auto;" class="lds-pacman"><div><div></div><div></div><div></div></div><div><div></div><div></div></div></div><style type="text/css">@keyframes lds-pacman-1 {
   0% {
     -webkit-transform: rotate(0deg);
@@ -180,7 +180,10 @@
   -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
   transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
 }
-</style></div>
+</style>
+<div id="loading-percentage">0%</div>
+</div>
+<section class="mbr-gallery mbr-section mbr-section-nopadding mbr-after-navbar logos" id="gallery1-b" data-rv-view="39" style="background-color: rgb(255, 255, 255); padding-top: 4.5rem; padding-bottom: 4rem; padding-right: 2em; padding-left: 2em">
     <!-- Gallery -->
     <div>
         <div class=" mbr-gallery-layout-default">
@@ -260,9 +263,20 @@
         </div>
     </div>
 </section>
-
+</div>
 
   <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script>
+    var percentage = 0
+    var loading = setInterval(function(){
+      percentage += 1;
+      $("#loading-percentage").html(percentage + "%")
+      if (percentage == 100) {
+        clearInterval(loading)
+      }
+    }, 80)
+
+  </script>
   <script src="assets/tether/tether.min.js"></script>
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
   <script src="assets/bootstrap-carousel-swipe/bootstrap-carousel-swipe.js"></script>
@@ -272,10 +286,16 @@
   <script src="assets/dropdown-menu/script.js"></script>
   <script src="assets/puritym/js/script.js"></script>
   <script src="assets/mobirise-gallery/script.js"></script>
-  <script src="assets/pace.min.js"></script>
+  <script src="assets/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script language="javascript" type="text/javascript">
-     $(window).load(function() {
-     $('#loading').hide();
+    $("#loading-percentage").html("100%")
+    clearInterval(loading)
+     $("#gallery1-b").imagesLoaded(function() {
+      $.when($('#loading').fadeOut(1000)).then(function(){
+         $('html').removeClass("page-loading")
+         $('body').removeClass("page-loading")
+         $('#wrapper-loading').removeClass("page-loading")
+      })
   });
 </script>
   
