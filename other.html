@@ -440,10 +440,10 @@
             });
         });
     });
-    $("#loading-percentage").html("100%")
-    clearInterval(loading)
      $("#gallery1-b").imagesLoaded(
       function() {
+        $("#loading-percentage").html("100%")
+        clearInterval(loading)
         $.when($('#loading').fadeOut(1000)).then(function(){
            $('html').removeClass("page-loading")
            $('body').removeClass("page-loading")
