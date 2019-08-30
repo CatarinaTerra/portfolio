@@ -9,7 +9,7 @@
 }
 
 @media (max-width: 768px) {
-#lb-gallery1-other .carousel-control, .close {
+#lb-gallery1-other .carousel-control, #lb-gallery1-other .close {
     position: fixed;
 }}
 
