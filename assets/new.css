@@ -126,13 +126,15 @@
 
 
 .logo .logos {
-  width: 19% !important;
-  padding: 10%;
+  width: 20% !important;
+  padding: 30%;
+  margin-left: 8%;
 }
 
 @media (max-width: 768px) {
 	.logo .logos {
  	 width: 49% !important;
+ 	 margin: 0% !important;
 	} 
 	.galeria-logos{
 		padding-left: 1em;
